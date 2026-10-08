@@ -1,6 +1,4 @@
-# Build and dependency artifacts
-target/
-*.class
+
 
 # IDE and Editor configurations
 .idea/
