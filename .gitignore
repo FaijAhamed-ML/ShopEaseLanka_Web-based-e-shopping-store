@@ -1,0 +1,21 @@
+# Build and dependency artifacts
+target/
+*.class
+
+# IDE and Editor configurations
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Operating System artifacts
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Log files
+*.log
+logs/
+
