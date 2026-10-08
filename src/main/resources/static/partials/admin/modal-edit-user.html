@@ -1,0 +1,40 @@
+  <!-- Edit User Role & Status Modal -->
+  <div class="modal-overlay" id="edit-user-modal">
+    <div class="modal-card" style="max-width: 460px;">
+      <div class="modal-header">
+        <h3 style="font-weight: 800;">Edit User Role & Status</h3>
+        <button class="close-btn" onclick="closeModal('edit-user-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleSaveUserRoleStatus(event)">
+          <input type="hidden" id="edit-user-id-input">
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label class="form-label">Username</label>
+            <input type="text" id="edit-user-username-input" class="form-control" disabled style="background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border-color);">
+          </div>
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label class="form-label">System Role</label>
+            <select id="edit-user-role-select" class="form-control" required>
+              <option value="CUSTOMER">CUSTOMER</option>
+              <option value="ADMIN">ADMIN</option>
+              <option value="CATALOG_MANAGER">CATALOG_MANAGER</option>
+              <option value="INVENTORY_OFFICER">INVENTORY_OFFICER</option>
+              <option value="SALES_MANAGER">SALES_MANAGER</option>
+              <option value="DELIVERY_COORDINATOR">DELIVERY_COORDINATOR</option>
+              <option value="CUSTOMER_EXPERIENCE_OFFICER">CUSTOMER_EXPERIENCE_OFFICER</option>
+              <option value="DELIVERY_PERSON">DELIVERY_PERSON</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Account Status</label>
+            <select id="edit-user-status-select" class="form-control" required>
+              <option value="ACTIVE">ACTIVE</option>
+              <option value="INACTIVE">INACTIVE</option>
+              <option value="SUSPENDED">SUSPENDED</option>
+            </select>
+          </div>
+          <button type="submit" class="primary-btn" id="edit-user-save-btn" style="width: 100%;">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
