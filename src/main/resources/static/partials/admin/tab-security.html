@@ -1,0 +1,83 @@
+    <!-- ===================================================================
+         TAB 1: USER SECURITY & LOGINS (Member 1)
+         =================================================================== -->
+    <section class="tab-content active" id="tab-security">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <h2 style="font-size: 1.3rem; font-weight: 800;">User Accounts & Login Security Audit</h2>
+        <div style="display: flex; gap: 8px;">
+          <button class="secondary-btn" style="color: var(--danger); border-color: #fca5a5;" onclick="clearOldSecurityLogsPrompt()"> Clear Outdated Logs</button>
+          <button class="secondary-btn" onclick="loadSecurityTab()"> Refresh</button>
+        </div>
+      </div>
+
+      <!-- Users table toolbar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin: 0;">System User Directory</h3>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <input type="text" id="users-search-input" class="form-control" placeholder="Search username, email, ID..." style="width: 220px; padding: 6px 12px; font-size: 0.85rem;" oninput="filterUsersTable()">
+          <select id="users-role-filter" class="form-control" style="width: 150px; padding: 6px 10px; font-size: 0.85rem;" onchange="filterUsersTable()">
+            <option value="ALL">All Roles</option>
+            <option value="CUSTOMER">CUSTOMER</option>
+            <option value="ADMIN">ADMIN</option>
+            <option value="INVENTORY_OFFICER">INVENTORY_OFFICER</option>
+            <option value="CATALOG_MANAGER">CATALOG_MANAGER</option>
+            <option value="SALES_MANAGER">SALES_MANAGER</option>
+            <option value="DELIVERY_COORDINATOR">DELIVERY_COORDINATOR</option>
+            <option value="CUSTOMER_EXPERIENCE_OFFICER">CUSTOMER_EXPERIENCE_OFFICER</option>
+            <option value="DELIVERY_PERSON">DELIVERY_PERSON</option>
+          </select>
+        </div>
+      </div>
+      <div class="data-table-container" style="margin-bottom: 28px;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>System Role</th>
+              <th>Account Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="users-table-body">
+            <!-- Loaded dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Login activity audit trail toolbar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 8px;">
+          <span>Login Activity & Suspicious Attempt Monitor</span>
+          <span class="badge badge-warning" id="suspicious-count-badge">0 Suspicious</span>
+        </h3>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <input type="text" id="logs-search-input" class="form-control" placeholder="Search IP, username..." style="width: 190px; padding: 6px 12px; font-size: 0.85rem;" oninput="filterLogsTable()">
+          <select id="logs-status-filter" class="form-control" style="width: 140px; padding: 6px 10px; font-size: 0.85rem;" onchange="filterLogsTable()">
+            <option value="ALL">All Logins</option>
+            <option value="SUCCESS">Success Only</option>
+            <option value="FAILURE">Failure Only</option>
+            <option value="SUSPICIOUS">Suspicious Only</option>
+          </select>
+        </div>
+      </div>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Log ID</th>
+              <th>User</th>
+              <th>IP Address</th>
+              <th>Attempt Time</th>
+              <th>Status</th>
+              <th>Suspicious Flag</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="login-logs-table-body">
+            <!-- Loaded dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </section>
