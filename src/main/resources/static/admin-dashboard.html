@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopEase Lanka Staff Administration Control Center - Security monitoring, catalog management, live inventory batch control, logistics, and review moderation.">
+  <title>Staff Control Center | ShopEase Lanka</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product-storefront.css">
+  <link rel="stylesheet" href="css/base-components.css">
+  <link rel="stylesheet" href="css/product-details.css">
+  <link rel="stylesheet" href="css/review.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/delivery.css">
+  <link rel="stylesheet" href="css/admin-shell.css">
+  <link rel="stylesheet" href="css/user.css">
+  <link rel="stylesheet" href="css/inventory.css">
+  <link rel="stylesheet" href="css/base-overlays.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+
+    <!-- Header -->
+  <header class="site-header" style="position: sticky; top: 0; z-index: 100; background: var(--bg-card); box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border-color);">
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px;">
+      <a href="/admin-dashboard.html" class="brand-logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <span style="font-weight: 800; font-size: 1.15rem; color: var(--text-main); display: inline-flex; align-items: center; gap: 6px;">
+          <svg style="width:18px;height:18px;color:var(--primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          ShopEase <span style="color: var(--primary);">Staff Console</span>
+        </span>
+        <span class="brand-badge" style="background: var(--bg-elevated); color: var(--primary); border: 1px solid var(--border-color); font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px;">Back-Office</span>
+      </a>
+
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
+        <a href="/index.html" class="nav-btn" style="font-size: 0.85rem; padding: 6px 12px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg style="width:14px;height:14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          View Public Store
+        </a>
+
+        <!-- Dedicated Staff Theme Switcher Button -->
+        <button id="theme-toggle-btn" class="staff-theme-toggle" title="Switch between Dark and Light mode" aria-label="Toggle dark/light mode">
+          <span class="theme-icon-slot">
+            <svg id="theme-icon-sun" class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none; width: 15px; height: 15px;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg id="theme-icon-moon" class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none; width: 15px; height: 15px;"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </span>
+          <span id="theme-text-label" class="theme-text-label" style="font-size: 0.8rem; font-weight: 700;">Theme</span>
+        </button>
+        
+        <!-- Authenticated Staff Identity Pill & Logout -->
+        <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-elevated); padding: 5px 14px; border-radius: var(--radius-full); border: 1px solid var(--border-color);">
+          <div style="font-size: 0.82rem; text-align: right; line-height: 1.25;">
+            <div style="font-weight: 700; color: var(--text-main);" id="admin-user-name">Staff Member</div>
+            <div style="font-size: 0.7rem; color: var(--primary); font-weight: 700; text-transform: uppercase;" id="admin-user-role">STAFF</div>
+          </div>
+          <button onclick="handleStaffLogout()" class="secondary-btn" style="padding: 4px 10px; font-size: 0.78rem; background: var(--danger-soft); color: var(--danger-text); font-weight: 700; border-radius: var(--radius-sm); border: 1px solid var(--border-color); cursor: pointer; transition: all 0.15s ease; display: inline-flex; align-items: center; gap: 5px;" title="Sign out of Staff Console">
+            <svg style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    
+
+    <!-- Tab Navigation -->
+    <nav class="admin-tabs" aria-label="Staff Modules">
+      <button class="admin-tab-btn active" onclick="switchAdminTab('security')" id="tab-btn-security">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        M1: User Security
+      </button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('catalog')" id="tab-btn-catalog">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 2 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        M2: Catalog Mgmt
+      </button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('inventory')" id="tab-btn-inventory">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+        M3: Inventory & Batches
+      </button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('orders')" id="tab-btn-orders">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        M4: Orders
+      </button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('deliveries')" id="tab-btn-deliveries">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        M5: Deliveries
+      </button>
+      <button class="admin-tab-btn" onclick="switchAdminTab('reviews')" id="tab-btn-reviews">
+        <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        M6: Review Moderation
+      </button>
+    </nav>
+
+    <div data-partial="partials/admin/tab-security.html"></div>
+    <div data-partial="partials/admin/tab-catalog.html"></div>
+    <div data-partial="partials/admin/tab-inventory.html"></div>
+    <div data-partial="partials/admin/tab-orders.html"></div>
+    <div data-partial="partials/admin/tab-deliveries.html"></div>
+    <div data-partial="partials/admin/tab-reviews.html"></div>
+  </main>
+
+  <div data-partial="partials/admin/modal-add-product.html"></div>
+  <div data-partial="partials/admin/modal-edit-product.html"></div>
+  <div data-partial="partials/admin/modal-add-batch.html"></div>
+  <div data-partial="partials/admin/modal-adjust-stock.html"></div>
+  <div data-partial="partials/admin/modal-update-threshold.html"></div>
+  <div data-partial="partials/admin/modal-edit-user.html"></div>
+  <div data-partial="partials/admin/modal-assign-rider.html"></div>
+  <div data-partial="partials/admin/modal-record-attempt.html"></div>
+  <div data-partial="partials/admin/modal-manage-order.html"></div>
+  <div data-partial="partials/admin/modal-edit-delivery-notes.html"></div>
+
+  <!-- Scripts -->
+  <script src="js/api-core.js"></script>
+  <script src="js/user/api-user.js"></script>
+  <script src="js/product/api-catalog.js"></script>
+  <script src="js/inventory/api-inventory.js"></script>
+  <script src="js/order/api-orders.js"></script>
+  <script src="js/delivery/api-deliveries.js"></script>
+  <script src="js/review/api-review.js"></script>
+  <script src="js/app-core.js"></script>
+  <script src="js/user/app-user.js"></script>
+  <script src="js/order/app-order.js"></script>
+  <script src="js/review/app-notifications.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/user/admin-tab-security.js"></script>
+  <script src="js/product/admin-tab-catalog.js"></script>
+  <script src="js/inventory/admin-tab-inventory.js"></script>
+  <script src="js/order/admin-tab-orders.js"></script>
+  <script src="js/delivery/admin-tab-deliveries.js"></script>
+  <script src="js/review/admin-tab-reviews.js"></script>
+  <script src="js/admin/admin-shell.js"></script>
+</body>
+</html>
