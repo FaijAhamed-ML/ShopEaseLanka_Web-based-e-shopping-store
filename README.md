@@ -37,8 +37,8 @@ Staff roles: Administrator, Catalog Manager, Inventory Officer, Sales Manager, D
 
 ### 1. Clone
 ```bash
-git clone <repo-url>
-cd shopease-lanka
+git clone https://github.com/FaijAhamed-ML/ShopEaseLanka_Web-based-e-shopping-store.git
+cd ShopEaseLanka_Web-based-e-shopping-store
 ```
 
 ### 2. Configure the database password
@@ -147,12 +147,12 @@ All responses use the `ApiResponse` wrapper (`success`, `message`, `data`).
 
 | # | Member | Student ID | Module | Branch |
 |---|---|---|---|---|
-| 1 | Sathsarani H.M.H.K. | IT25101557 | User Management | `feature/user-management` |
-| 2 | Thamoddaya W.M.R. | IT25101611 | Product Management | `feature/product-management` |
-| 3 | Wickramasundara D.G.U.B. | IT25101588 | Inventory Management | `feature/inventory-management` |
-| 4 | Dharshika T. | IT25101565 | Order Management | `feature/order-management` |
-| 5 | Lakshith R. | IT25101492 | Delivery Management | `feature/delivery-management` |
-| 6 | Ahamed M.L.F. | IT25101505 | Review & Notification Management | `feature/review-notification` |
+| 1 | Sathsarani H.M.H.K. | IT25101557 | User Management | `UserManagement` |
+| 2 | Thamoddaya W.M.R. | IT25101611 | Product Management | `ProductManagement` |
+| 3 | Wickramasundara D.G.U.B. | IT25101588 | Inventory Management | `InventoryManagement` |
+| 4 | Dharshika T. | IT25101565 | Order Management | `OrderManagement` |
+| 5 | Lakshith R. | IT25101492 | Delivery Management | `DeliveryManagement` |
+| 6 | Ahamed M.L.F. | IT25101505 | Review & Notification Management | `ReviewManagement` |
 
 ### Git workflow
 1. `main` holds the final, tested code; `develop` is where branches are merged first.
