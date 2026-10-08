@@ -1,1 +1,0 @@
-# ShopEaseLanka_Web-based-e-shopping-store
