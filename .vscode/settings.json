@@ -1,5 +1,0 @@
-{
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "git.ignoreLimitWarning": true,
-    "java.compile.nullAnalysis.mode": "automatic"
-}
