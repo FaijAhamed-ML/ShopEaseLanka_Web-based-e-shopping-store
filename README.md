@@ -2,7 +2,7 @@
 
 ShopEase Lanka is a full-stack e-shopping web application for Sri Lankan customers and store staff. It brings user accounts, the product catalogue, live inventory, order processing, delivery tracking and customer reviews/notifications into one platform.
 
-> **Module:** SE2030 Software Engineering / IT2140 Database Design and Development - SLIIT
+> **Module:** SE2030 Software Engineering - SLIIT
 > **Group code:** 2026-Y2-S1-MLB-WEB2G1-02
 
 ---
